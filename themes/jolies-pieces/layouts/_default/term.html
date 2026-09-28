@@ -1,0 +1,32 @@
+{{ define "main" }}
+{{- $isEN := eq .Site.Language.Lang "en" -}}
+{{- $isAuthor := in (slice "auteurs" "authors") .Type -}}
+{{- if eq .Data.Plural "formats" -}}{{ partial "format-hub.html" . }}{{- else -}}
+<section class="page-hero">
+    <nav class="breadcrumb" aria-label="{{ if $isEN }}Breadcrumb{{ else }}Fil d'Ariane{{ end }}">
+        <a href="{{ cond $isEN "/en/" "/" }}">{{ if $isEN }}Home{{ else }}Accueil{{ end }}</a><span aria-hidden="true">/</span>
+        {{ if $isAuthor }}<a href="{{ (cond $isEN "authors/" "auteurs/") | relLangURL }}">{{ if $isEN }}Contributors{{ else }}La rédaction{{ end }}</a><span aria-hidden="true">/</span>{{ end }}
+        <span>{{ .Title }}</span>
+    </nav>
+    {{ if $isAuthor }}
+    <div class="author-head">
+        {{ with .Params.photo }}<img src="{{ . | relURL }}" alt="{{ $.Title }}" width="160" height="160">{{ end }}
+        <div>
+            <h1 class="page-display small">{{ .Title }}</h1>
+            {{ with .Params.role }}<p class="page-script">{{ . }}</p>{{ end }}
+            {{ with .Params.expertise }}<ul class="expertise">{{ range . }}<li>{{ . }}</li>{{ end }}</ul>{{ end }}
+        </div>
+    </div>
+    {{ else }}
+    <h1 class="page-display small">{{ .Title }}</h1>
+    {{ end }}
+</section>
+<section class="block">
+    {{ with .Params.bio }}<div class="prose narrow-prose"><p class="lede">{{ . }}</p></div>{{ end }}
+    {{ with .Content }}<div class="prose narrow-prose">{{ . }}</div>{{ end }}
+    <h2 class="script-title">{{ if $isEN }}Stories{{ else }}Ses articles{{ end }}</h2>
+    {{ if .Pages }}<div class="cards">{{ range .Pages.ByDate.Reverse }}{{ partial "card.html" . }}{{ end }}</div>
+    {{ else }}<p class="empty-note">{{ if $isEN }}No story yet.{{ else }}Pas encore d'article.{{ end }}</p>{{ end }}
+</section>
+{{- end -}}
+{{ end }}

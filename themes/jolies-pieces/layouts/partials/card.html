@@ -1,0 +1,8 @@
+{{- $isEN := eq .Site.Language.Lang "en" -}}
+<a class="card" href="{{ .RelPermalink }}">
+    <span class="card-media">{{ with .Params.image }}<img src="{{ . | relURL }}" alt="{{ with $.Params.imageAlt }}{{ . }}{{ else }}{{ $.Title }}{{ end }}" loading="lazy" width="700" height="875">{{ end }}</span>
+    <span class="card-cat">{{ with .CurrentSection }}{{ .Title }}{{ end }}{{ range first 1 (.GetTerms "formats") }} · {{ .Title }}{{ end }}</span>
+    <h3>{{ partial "resolveyear" .Title }}</h3>
+    {{ with .Description }}<p>{{ . }}</p>{{ end }}
+    <span class="card-meta">{{ with .Params.auteur }}{{ index . 0 }} · {{ end }}{{ time.Format (cond $isEN "Jan 2, 2006" "2 January 2006") (default .Date .Lastmod) }}</span>
+</a>

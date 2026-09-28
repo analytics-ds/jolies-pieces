@@ -1,0 +1,27 @@
+{{- $isEN := eq .Site.Language.Lang "en" -}}
+{{- $other := "" -}}{{- range partial "format-pages.html" . }}{{ if ne .RelPermalink $.RelPermalink }}{{ $other = . }}{{ end }}{{ end -}}
+<section class="page-hero">
+    <nav class="breadcrumb" aria-label="{{ if $isEN }}Breadcrumb{{ else }}Fil d'Ariane{{ end }}">
+        <a href="{{ cond $isEN "/en/" "/" | relURL }}">{{ if $isEN }}Home{{ else }}Accueil{{ end }}</a><span aria-hidden="true">/</span><span>{{ .Title }}</span>
+    </nav>
+    <h1 class="page-display">{{ .Title }}</h1>
+    {{ with .Params.tagline }}<p class="page-script">{{ . }}</p>{{ end }}
+</section>
+
+<section class="block hub-intro">
+    {{ with .Params.image }}<img class="hub-visual" src="{{ . | relURL }}" alt="{{ $.Params.imageAlt }}" width="700" height="1050">{{ end }}
+    <div class="prose">
+        {{ .Content }}
+        <p class="hub-count">{{ len .Pages }} {{ if $isEN }}{{ cond (eq (len .Pages) 1) "story" "stories" }}{{ else }}article{{ if gt (len .Pages) 1 }}s{{ end }}{{ end }}</p>
+    </div>
+</section>
+
+<section class="block">
+    <h2 class="script-title">{{ if $isEN }}All {{ lower .Title }}{{ else }}Tous les {{ lower .Title }}{{ end }}</h2>
+    {{ if .Pages }}
+    <div class="cards">{{ range .Pages.ByDate.Reverse }}{{ partial "card.html" . }}{{ end }}</div>
+    {{ else }}
+    <p class="empty-note">{{ if $isEN }}The first comparisons are being prepared. In the meantime, our guides answer the essential questions.{{ else }}Les premiers comparatifs sont en préparation. En attendant, nos guides répondent aux questions essentielles.{{ end }}</p>
+    {{ end }}
+    {{ with $other }}<p class="hub-switch"><a class="btn-outline" href="{{ .RelPermalink }}">{{ if $isEN }}See our {{ lower .Title }}{{ else }}Voir nos {{ lower .Title }}{{ end }} <span aria-hidden="true">&#8599;</span></a></p>{{ end }}
+</section>

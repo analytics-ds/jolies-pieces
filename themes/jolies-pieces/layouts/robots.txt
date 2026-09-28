@@ -1,0 +1,48 @@
+# {{ .Site.Title }}
+# {{ .Site.BaseURL }}
+{{- $prodHost := site.Params.prodHost }}
+{{- $isProdHost := strings.Contains (urls.Parse .Site.BaseURL).Host $prodHost }}
+{{- if not $isProdHost }}
+
+# Preversion servie hors du domaine final : crawl interdit (volontaire).
+# Se leve automatiquement des que le site est servi sur {{ $prodHost }}.
+User-agent: *
+Disallow: /
+{{- else }}
+
+User-agent: *
+Allow: /
+
+# Moteurs de recherche et assistants IA : acces explicite (visibilite GEO)
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-SearchBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+Sitemap: {{ "sitemap.xml" | absURL }}
+{{- end }}

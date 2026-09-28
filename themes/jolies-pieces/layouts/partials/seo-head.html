@@ -1,0 +1,167 @@
+{{- /* Pages de tags : noindex permanent (contenu maigre). */ -}}
+{{- $isTagPage := or (eq .Type "tags") (eq .Section "tags") }}
+{{- /* Liste /formats/ (doublon des deux hubs) et hub de format encore vide : noindex, follow. */ -}}
+{{- if and (eq .Data.Plural "formats") (or (eq .Kind "taxonomy") (not .Pages)) }}{{ $isTagPage = true }}{{ end }}
+{{- /* Garde-fou : tant que le site n'est pas servi sur son domaine final, tout est en noindex.
+     Evite l'indexation de la preversion GitHub Pages. Se leve tout seul des que le DNS pointe. */ -}}
+{{- $prodHost := site.Params.prodHost }}
+{{- $isProdHost := strings.Contains (urls.Parse .Site.BaseURL).Host $prodHost }}
+{{- if not $isProdHost }}
+<!-- Preversion (hors domaine final) : noindex complet, volontaire -->
+<meta name="robots" content="noindex, nofollow">
+<meta name="googlebot" content="noindex, nofollow">
+{{- else if $isTagPage }}
+<meta name="robots" content="noindex, follow">
+<meta name="googlebot" content="noindex, follow">
+{{- else }}
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+<meta name="googlebot" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+{{- end }}
+
+<link rel="canonical" href="{{ .Permalink }}">
+
+{{- range partial "hreflang-alternates.html" . }}
+<link rel="alternate" hreflang="{{ .lang }}" href="{{ .url }}">
+{{- end }}
+{{- if and .IsHome (eq .Language.Lang "fr") }}{{ partial "check-translations.html" . }}{{ end }}
+
+<meta property="og:title" content="{{ with .Params.seoTitle }}{{ partial "resolveyear" . }}{{ else }}{{ partial "resolveyear" $.Title }}{{ end }}">
+<meta property="og:description" content="{{ with .Description }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}">
+<meta property="og:type" content="{{ if .IsPage }}article{{ else }}website{{ end }}">
+<meta property="og:url" content="{{ .Permalink }}">
+<meta property="og:site_name" content="{{ .Site.Title }}">
+<meta property="og:locale" content="{{ if eq .Site.Language.Lang "en" }}en_US{{ else }}fr_FR{{ end }}">
+{{- with (or .Params.image .Site.Params.ogImage) }}
+<meta property="og:image" content="{{ . | absURL }}">
+{{- end }}
+{{- if .IsPage }}
+{{ with .Params.auteur }}<meta property="article:author" content="{{ index . 0 }}">{{ end }}
+<meta property="article:published_time" content="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">
+<meta property="article:modified_time" content="{{ .Lastmod.Format "2006-01-02T15:04:05Z07:00" }}">
+{{- range .Params.tags }}
+<meta property="article:tag" content="{{ . }}">
+{{- end }}
+{{- end }}
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{ with .Params.seoTitle }}{{ partial "resolveyear" . }}{{ else }}{{ partial "resolveyear" $.Title }}{{ end }}">
+<meta name="twitter:description" content="{{ with .Description }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}">
+{{- with (or .Params.image .Site.Params.ogImage) }}
+<meta name="twitter:image" content="{{ . | absURL }}">
+{{- end }}
+
+{{- $orgSameAs := slice }}
+{{- range (slice .Site.Params.instagram .Site.Params.pinterest .Site.Params.x) }}{{ with . }}{{ $orgSameAs = $orgSameAs | append . }}{{ end }}{{ end }}
+
+{{ if .IsPage }}
+{{- $authorName := "" }}{{ $authorURL := "" }}
+{{- with .Params.auteur }}{{ $authorName = index . 0 }}{{ end }}
+{{- with site.GetPage (printf "/%s" (cond (eq site.Language.Lang "en") "authors" "auteurs")) }}
+  {{- range .Pages }}{{ if eq .Title $authorName }}{{ $authorURL = .Permalink }}{{ end }}{{ end }}
+{{- end }}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "{{ .Params.schemaType | default "BlogPosting" }}",
+  "headline": {{ partial "resolveyear" .Title | jsonify }},
+  "description": {{ .Description | jsonify }},
+  "datePublished": "{{ .Date.Format "2006-01-02" }}",
+  "dateModified": "{{ .Lastmod.Format "2006-01-02" }}",
+  "inLanguage": "{{ .Site.LanguageCode }}",
+  "wordCount": {{ .WordCount }},
+  "timeRequired": "PT{{ .ReadingTime }}M",
+  {{ with .Params.image }}"image": {{ . | absURL | jsonify }},{{ end }}
+  {{ with $authorName }}"author": { "@type": "Person", "name": {{ . | jsonify }}{{ with $authorURL }}, "url": {{ . | jsonify }}{{ end }} },{{ end }}
+  "publisher": {
+    "@type": "Organization",
+    "name": {{ .Site.Title | jsonify }},
+    "url": {{ .Site.BaseURL | jsonify }},
+    "logo": { "@type": "ImageObject", "url": {{ "images/logo-jolies-pieces-carre.png" | absURL | jsonify }} }
+  },
+  "mainEntityOfPage": { "@type": "WebPage", "@id": {{ .Permalink | jsonify }} },
+  "isPartOf": { "@type": "Blog", "name": {{ .Site.Title | jsonify }}, "url": {{ .Site.BaseURL | jsonify }} }
+}
+</script>
+
+{{- $home := cond (eq .Site.Language.Lang "en") (printf "%sen/" .Site.BaseURL) .Site.BaseURL }}
+{{- $sectionPage := .CurrentSection }}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": {{ (cond (eq .Site.Language.Lang "en") "Home" "Accueil") | jsonify }}, "item": {{ $home | jsonify }} },
+    {{ if and $sectionPage (ne $sectionPage.Permalink $home) }}{ "@type": "ListItem", "position": 2, "name": {{ $sectionPage.Title | jsonify }}, "item": {{ $sectionPage.Permalink | jsonify }} },
+    { "@type": "ListItem", "position": 3, "name": {{ partial "resolveyear" .Title | jsonify }}, "item": {{ .Permalink | jsonify }} }
+    {{ else }}{ "@type": "ListItem", "position": 2, "name": {{ partial "resolveyear" .Title | jsonify }}, "item": {{ .Permalink | jsonify }} }{{ end }}
+  ]
+}
+</script>
+
+{{ with .Params.faq }}{{ $faq := . }}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+  {{- range $i, $item := $faq }}
+    { "@type": "Question", "name": {{ $item.question | jsonify }}, "acceptedAnswer": { "@type": "Answer", "text": {{ $item.answer | markdownify | plainify | jsonify }} } }{{ if ne $i (sub (len $faq) 1) }},{{ end }}
+  {{- end }}
+  ]
+}
+</script>
+{{ end }}
+
+{{ with .Params.items }}{{ $items := . }}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "itemListElement": [
+  {{- range $i, $item := $items }}
+    { "@type": "ListItem", "position": {{ add $i 1 }}, "name": {{ $item.name | jsonify }}{{ with $item.url }}, "url": {{ . | jsonify }}{{ end }}{{ with $item.description }}, "description": {{ . | jsonify }}{{ end }} }{{ if ne $i (sub (len $items) 1) }},{{ end }}
+  {{- end }}
+  ]
+}
+</script>
+{{ end }}
+
+{{ else if .IsHome }}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": {{ .Site.Title | jsonify }},
+  "description": {{ .Site.Params.description | jsonify }},
+  "inLanguage": "{{ .Site.LanguageCode }}",
+  "url": {{ .Permalink | jsonify }}
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": {{ .Site.Title | jsonify }},
+  "url": {{ .Site.BaseURL | jsonify }},
+  "description": {{ .Site.Params.description | jsonify }},
+  "logo": { "@type": "ImageObject", "url": {{ "images/logo-jolies-pieces-carre.png" | absURL | jsonify }}, "width": 600, "height": 600 },
+  "foundingDate": {{ .Site.Params.organizationFounded | jsonify }}{{ if $orgSameAs }},
+  "sameAs": {{ $orgSameAs | jsonify }}{{ end }}
+}
+</script>
+{{ end }}
+
+{{ if and .IsNode (in (slice "auteurs" "authors") .Type) .Data.Term }}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": {{ .Title | jsonify }},
+  "url": {{ .Permalink | jsonify }}{{ with .Params.role }},
+  "jobTitle": {{ . | jsonify }}{{ end }}{{ with .Params.photo }},
+  "image": {{ . | absURL | jsonify }}{{ end }}{{ with .Params.expertise }},
+  "knowsAbout": {{ . | jsonify }}{{ end }},
+  "worksFor": { "@type": "Organization", "name": {{ .Site.Title | jsonify }}, "url": {{ .Site.BaseURL | jsonify }} }
+}
+</script>
+{{ end }}

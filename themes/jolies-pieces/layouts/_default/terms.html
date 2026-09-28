@@ -1,0 +1,22 @@
+{{ define "main" }}
+{{- $isEN := eq .Site.Language.Lang "en" -}}
+<section class="page-hero">
+    <nav class="breadcrumb" aria-label="{{ if $isEN }}Breadcrumb{{ else }}Fil d'Ariane{{ end }}">
+        <a href="{{ cond $isEN "/en/" "/" }}">{{ if $isEN }}Home{{ else }}Accueil{{ end }}</a><span aria-hidden="true">/</span><span>{{ .Title }}</span>
+    </nav>
+    <h1 class="page-display small">{{ .Title }}</h1>
+    {{ with .Description }}<p class="page-script">{{ . }}</p>{{ end }}
+</section>
+<section class="block">
+    <div class="authors-grid">
+        {{ range .Data.Terms.Alphabetical }}
+        <a class="author-card" href="{{ .Page.RelPermalink }}">
+            {{ with .Page.Params.photo }}<img src="{{ . | relURL }}" alt="" width="120" height="120">{{ end }}
+            <span class="author-name">{{ .Page.Title }}</span>
+            <span class="author-role">{{ .Page.Params.role }}</span>
+            <span class="author-count">{{ .Count }} {{ if $isEN }}{{ cond (eq .Count 1) "story" "stories" }}{{ else }}article{{ if gt .Count 1 }}s{{ end }}{{ end }}</span>
+        </a>
+        {{ end }}
+    </div>
+</section>
+{{ end }}

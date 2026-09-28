@@ -1,0 +1,137 @@
+{
+ "hero": {
+  "id": 7752661,
+  "photographer": "Arina Krasnikova",
+  "alt": "Portrait of a woman in a white shirt facing away against a beige background, captured indoors.",
+  "size": [
+   2000,
+   1335
+  ]
+ },
+ "lookbook": {
+  "id": 5793956,
+  "photographer": "Yan Krukau",
+  "alt": "A woman leans on a sofa in a chic, cozy minimalist interior space.",
+  "size": [
+   2000,
+   1333
+  ]
+ },
+ "pret-a-porter": {
+  "id": 4823728,
+  "photographer": "Maksim Goncharenok",
+  "alt": "A fashionable woman in a brown blazer poses against a textured background indoors.",
+  "size": [
+   1400,
+   2100
+  ]
+ },
+ "bijoux": {
+  "id": 7615245,
+  "photographer": "Nataliya Vaitkevich",
+  "alt": "Close-up portrait of a woman wearing gold earrings and necklace, highlighted by natural sunlight.",
+  "size": [
+   1400,
+   2100
+  ]
+ },
+ "chaussures": {
+  "id": 37545569,
+  "photographer": "Luk Sauvage",
+  "alt": "Chic display of assorted loafers and a handbag in a store window.",
+  "size": [
+   1400,
+   1866
+  ]
+ },
+ "sacs": {
+  "id": 30169157,
+  "photographer": "Rajat Sahu",
+  "alt": "Fashionable woman with tan leather handbag walking outdoors, showcasing elegant style.",
+  "size": [
+   1400,
+   1750
+  ]
+ },
+ "concept-stores": {
+  "id": 17315932,
+  "photographer": "Pew Nguyen",
+  "alt": "Young woman examines clothes in a minimalist fashion store, focused on a pair of beige shorts.",
+  "size": [
+   1400,
+   2100
+  ]
+ },
+ "edito-1": {
+  "id": 7256874,
+  "photographer": "Anete Lusina",
+  "alt": "Anonymous female designer drawing sketch of new clothes while sitting at table with samples of fabrics during work in studio",
+  "size": [
+   1400,
+   2097
+  ]
+ },
+ "edito-2": {
+  "id": 7147469,
+  "photographer": "Michael Burrows",
+  "alt": "From above various of papers with sewing patterns placed on wooden table with fabric in light room of workshop on blurred background",
+  "size": [
+   1400,
+   2100
+  ]
+ },
+ "methode-1": {
+  "id": 8581381,
+  "photographer": "RDNE Stock project",
+  "alt": "A stylish apparel display with pampas grass, hat, and shoes in a modern room.",
+  "size": [
+   1400,
+   2100
+  ]
+ },
+ "methode-2": {
+  "id": 8989864,
+  "photographer": "Alena Darmel",
+  "alt": "A minimalist clothing rack with neutral outfits and white sneakers in a bright room.",
+  "size": [
+   1400,
+   2100
+  ]
+ },
+ "methode-3": {
+  "id": 6347879,
+  "photographer": "Liza Summer",
+  "alt": "Interior of light room with various clothes on hangers in wardrobe near white walls",
+  "size": [
+   1400,
+   2100
+  ]
+ },
+ "article-concept-store": {
+  "id": 17305438,
+  "photographer": "Pew Nguyen",
+  "alt": "A selection of white and neutral colored dresses hanging on a rack in a boutique setting. Perfect for fashion and retail themes.",
+  "size": [
+   1400,
+   2100
+  ]
+ },
+ "article-bijoux": {
+  "id": 9649265,
+  "photographer": "Ari Roberts",
+  "alt": "Close-up of woman wearing gold hoop earrings and pearl necklaces, showcasing elegant fashion.",
+  "size": [
+   1400,
+   2097
+  ]
+ },
+ "article-pret-a-porter": {
+  "id": 10084516,
+  "photographer": "Iryna Khamulyak",
+  "alt": "Stylish woman in beige suit and glasses captured in a dramatic lighting setting.",
+  "size": [
+   1400,
+   2100
+  ]
+ }
+}

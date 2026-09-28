@@ -1,0 +1,4 @@
+{{- /* Remplace le token {annee} par l'annee courante (rebuild mensuel via cron GitHub Actions).
+     Usage : {{ partial "resolveyear" .Title }}. Fonctionne dans le front matter, contrairement
+     au shortcode {{< year >}} limite au corps de l'article. */ -}}
+{{- replace . "{annee}" (string now.Year) -}}

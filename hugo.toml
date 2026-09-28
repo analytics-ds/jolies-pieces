@@ -1,0 +1,129 @@
+baseURL = "https://jolies-pieces.fr/"
+removePathAccents = true
+title = "Jolies Pièces"
+theme = "jolies-pieces"
+defaultContentLanguage = "fr"
+defaultContentLanguageInSubdir = false
+# true + gabarit layouts/robots.txt : le robots.txt sort du gabarit (garde-fou noindex hors domaine final), jamais de static/robots.txt
+enableRobotsTXT = true
+enableEmoji = false
+buildFuture = false
+
+[params]
+  prodHost = "jolies-pieces.fr"
+  # Sections qui portent des articles (FR + EN). A tenir a jour si une rubrique est ajoutee.
+  rubriques = ["pret-a-porter", "bijoux", "chaussures", "sacs", "concept-stores", "ready-to-wear", "jewelry", "shoes", "bags"]
+  ogImage = "images/og-jolies-pieces.jpg"
+  organizationFounded = "2026"
+  email = "redaction@jolies-pieces.fr"
+  instagram = ""
+  pinterest = ""
+  x = ""
+
+[markup]
+  [markup.goldmark.renderer]
+    unsafe = true
+  [markup.tableOfContents]
+    startLevel = 2
+    endLevel = 3
+
+[taxonomies]
+  auteur = "auteurs"
+  tag = "tags"
+  format = "formats"
+
+# Hubs transverses Guides / Comparatifs a la racine : /guides/, /comparatifs/, /en/comparisons/
+[permalinks]
+  [permalinks.term]
+    formats = "/:slug/"
+
+[languages]
+  [languages.fr]
+    languageCode = "fr-FR"
+    languageName = "Français"
+    weight = 1
+    title = "Jolies Pièces"
+    contentDir = "content/fr"
+    [languages.fr.params]
+      description = "Le magazine des créateurs de mode. Prêt-à-porter, bijoux, chaussures, sacs et concept stores, nos guides, comparatifs et adresses sont sourcés et mis à jour."
+      baseline = "Le magazine des créateurs de mode"
+      script = "le magazine des créateurs"
+    [languages.fr.taxonomies]
+      auteur = "auteurs"
+      tag = "tags"
+      format = "formats"
+    [[languages.fr.menus.main]]
+      identifier = "pret-a-porter"
+      name = "Prêt-à-porter"
+      url = "/pret-a-porter/"
+      weight = 1
+    [[languages.fr.menus.main]]
+      identifier = "bijoux"
+      name = "Bijoux"
+      url = "/bijoux/"
+      weight = 2
+    [[languages.fr.menus.main]]
+      identifier = "chaussures"
+      name = "Chaussures"
+      url = "/chaussures/"
+      weight = 3
+    [[languages.fr.menus.main]]
+      identifier = "sacs"
+      name = "Sacs"
+      url = "/sacs/"
+      weight = 4
+    [[languages.fr.menus.main]]
+      identifier = "concept-stores"
+      name = "Concept stores"
+      url = "/concept-stores/"
+      weight = 5
+
+  [languages.en]
+    languageCode = "en-US"
+    languageName = "English"
+    weight = 2
+    title = "Jolies Pièces"
+    contentDir = "content/en"
+    [languages.en.params]
+      description = "The magazine of independent fashion designers. Ready-to-wear, jewelry, shoes, bags and concept stores, with sourced, up-to-date guides, comparisons and addresses."
+      baseline = "The magazine of fashion designers"
+      script = "the designer fashion magazine"
+    [languages.en.taxonomies]
+      auteur = "authors"
+      tag = "tags"
+      format = "formats"
+    [[languages.en.menus.main]]
+      identifier = "ready-to-wear"
+      name = "Ready-to-wear"
+      url = "/en/ready-to-wear/"
+      weight = 1
+    [[languages.en.menus.main]]
+      identifier = "jewelry"
+      name = "Jewelry"
+      url = "/en/jewelry/"
+      weight = 2
+    [[languages.en.menus.main]]
+      identifier = "shoes"
+      name = "Shoes"
+      url = "/en/shoes/"
+      weight = 3
+    [[languages.en.menus.main]]
+      identifier = "bags"
+      name = "Bags"
+      url = "/en/bags/"
+      weight = 4
+    [[languages.en.menus.main]]
+      identifier = "concept-stores"
+      name = "Concept stores"
+      url = "/en/concept-stores/"
+      weight = 5
+
+[outputFormats]
+  [outputFormats.llms]
+    mediaType = "text/plain"
+    baseName = "llms"
+    isPlainText = true
+    notAlternative = true
+
+[outputs]
+  home = ["HTML", "RSS", "llms"]

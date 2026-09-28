@@ -1,0 +1,17 @@
+{{ define "main" }}
+{{- $isEN := eq .Site.Language.Lang "en" -}}
+<section class="page-hero">
+    <nav class="breadcrumb" aria-label="{{ if $isEN }}Breadcrumb{{ else }}Fil d'Ariane{{ end }}">
+        <a href="{{ cond $isEN "/en/" "/" }}">{{ if $isEN }}Home{{ else }}Accueil{{ end }}</a><span aria-hidden="true">/</span><span>{{ .Title }}</span>
+    </nav>
+    <h1 class="page-display">{{ partial "resolveyear" .Title }}</h1>
+    {{ with .Params.tagline }}<p class="page-script">{{ . }}</p>{{ end }}
+</section>
+<section class="block narrow">
+    <div class="prose">
+        {{ with .Description }}<p class="lede">{{ . }}</p>{{ end }}
+        {{ .Content }}
+    </div>
+    {{ with .Params.faq }}{{ partial "faq.html" (dict "faq" . "isEN" $isEN) }}{{ end }}
+</section>
+{{ end }}

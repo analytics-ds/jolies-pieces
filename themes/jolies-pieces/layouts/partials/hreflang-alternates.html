@@ -1,0 +1,15 @@
+{{- /* Source unique des hreflang, partagee par le <head> et le sitemap.
+       Renvoie la liste {lang, url} du groupe de traductions de la page (elle-meme incluse),
+       plus x-default qui pointe toujours sur la version FR. Liste vide si la page n'a pas
+       de traduction : pas de hreflang du tout plutot qu'un hreflang orphelin.
+       La langue vient de .Language.Lang, jamais de l'URL. */ -}}
+{{- $out := slice -}}
+{{- if and .IsTranslated (not (or (eq .Type "tags") (eq .Section "tags"))) -}}
+  {{- $xDefault := "" -}}
+  {{- range .AllTranslations -}}
+    {{- $out = $out | append (dict "lang" .Language.Lang "url" .Permalink) -}}
+    {{- if eq .Language.Lang "fr" }}{{ $xDefault = .Permalink }}{{ end -}}
+  {{- end -}}
+  {{- with $xDefault }}{{ $out = $out | append (dict "lang" "x-default" "url" .) }}{{ end -}}
+{{- end -}}
+{{- return $out -}}

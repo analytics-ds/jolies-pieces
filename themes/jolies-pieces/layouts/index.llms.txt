@@ -1,0 +1,35 @@
+{{- $isEN := eq .Site.Language.Lang "en" -}}
+# {{ .Site.Title }}
+
+> {{ .Site.Params.description }}
+
+{{ if $isEN -}}
+Jolies Pièces is an independent magazine devoted to fashion designers, covering designer ready-to-wear, jewelry, shoes, bags and concept stores. No sponsored content, no affiliate links. Every story is sourced, dated and updated, and facts are checked at the source before publication.
+{{- else -}}
+Jolies Pièces est un média indépendant consacré aux créateurs de mode, prêt-à-porter de créateur, bijoux, chaussures, sacs et concept stores. Aucun contenu sponsorisé, aucun lien d'affiliation. Chaque article est sourcé, daté et mis à jour, et les faits sont vérifiés à la source avant publication.
+{{- end }}
+
+{{ if $isEN }}## Sections{{ else }}## Rubriques{{ end }}
+{{ range (where .Site.Sections "Section" "in" site.Params.rubriques).ByWeight }}
+- [{{ .Title | htmlUnescape }}]({{ .Permalink }}) : {{ .Params.tagline | default .Description | htmlUnescape }}
+{{- end }}
+
+{{ if $isEN }}## Guides and comparisons{{ else }}## Guides et comparatifs{{ end }}
+{{ range partial "format-pages.html" . }}{{ if .Pages }}
+- [{{ .Title | htmlUnescape }}]({{ .Permalink }}) : {{ .Description | htmlUnescape }} ({{ len .Pages }} {{ if $isEN }}stories{{ else }}articles{{ end }})
+{{- end }}{{ end }}
+
+{{ if $isEN }}## Articles{{ else }}## Articles{{ end }}
+{{ range (where .Site.RegularPages "Section" "in" site.Params.rubriques).ByDate.Reverse }}
+- [{{ partial "resolveyear" .Title | htmlUnescape }}]({{ .Permalink }}) : {{ .Description | htmlUnescape }} ({{ if $isEN }}updated{{ else }}mis à jour le{{ end }} {{ .Lastmod.Format "2006-01-02" }})
+{{- end }}
+
+{{ if $isEN }}## About{{ else }}## À propos{{ end }}
+{{ range (where .Site.RegularPages "Params.layout" "institutionnel") }}
+- [{{ .Title | htmlUnescape }}]({{ .Permalink }}) : {{ .Description | htmlUnescape }}
+{{- end }}
+
+{{ if $isEN }}## Contributors{{ else }}## La rédaction{{ end }}
+{{ with site.GetPage (printf "/%s" (cond $isEN "authors" "auteurs")) }}{{ range .Pages }}
+- [{{ .Title | htmlUnescape }}]({{ .Permalink }}) : {{ .Params.role }}
+{{- end }}{{ end }}

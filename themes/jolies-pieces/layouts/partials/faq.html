@@ -1,0 +1,9 @@
+<div class="faq">
+    <h2>{{ if .isEN }}Frequently asked questions{{ else }}Questions fréquentes{{ end }}</h2>
+    {{ range .faq }}
+    <details class="faq-item">
+        <summary><h3>{{ .question }}</h3></summary>
+        <div class="faq-answer">{{ .answer | markdownify }}</div>
+    </details>
+    {{ end }}
+</div>

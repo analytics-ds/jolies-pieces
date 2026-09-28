@@ -1,0 +1,38 @@
+{{- $isEN := eq .Site.Language.Lang "en" -}}
+<footer class="site-footer">
+    <div class="footer-top">
+        <div class="footer-col">
+            <p class="footer-title">{{ if $isEN }}The magazine{{ else }}Le média{{ end }}</p>
+            <ul>
+                <li><a href="{{ (cond $isEN "about/" "a-propos/") | relLangURL }}">{{ if $isEN }}About and method{{ else }}Qui sommes-nous{{ end }}</a></li>
+                <li><a href="{{ (cond $isEN "authors/" "auteurs/") | relLangURL }}">{{ if $isEN }}Contributors{{ else }}La rédaction{{ end }}</a></li>
+                <li><a href="{{ "contact/" | relLangURL }}">Contact</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <p class="footer-title">{{ if $isEN }}Sections{{ else }}Rubriques{{ end }}</p>
+            <ul>{{ range .Site.Menus.main }}<li><a href="{{ .URL | relURL }}">{{ .Name }}</a></li>{{ end }}</ul>
+        </div>
+        <div class="footer-col">
+            <p class="footer-title">{{ if $isEN }}Information{{ else }}Informations{{ end }}</p>
+            <ul>
+                <li><a href="{{ (cond $isEN "legal-notice/" "mentions-legales/") | relLangURL }}">{{ if $isEN }}Legal notice{{ else }}Mentions légales{{ end }}</a></li>
+                {{ with .OutputFormats.Get "rss" }}<li><a href="{{ .Permalink }}">RSS</a></li>{{ end }}
+                <li><a href="{{ "llms.txt" | relLangURL }}">llms.txt</a></li>
+            </ul>
+        </div>
+        <div class="footer-col footer-note">
+            <p class="footer-title">{{ if $isEN }}Stay curious. Stay elegant.{{ else }}Restez curieuse. Restez élégante.{{ end }}</p>
+            <p>{{ if $isEN }}An independent magazine. No sponsored content, no affiliate links. Every designer we mention is mentioned on merit.{{ else }}Un média indépendant. Aucun contenu sponsorisé, aucun lien d'affiliation. Chaque créateur cité l'est pour ce qu'il fait.{{ end }}</p>
+            {{ with .Site.Params.email }}<a class="btn-dark" href="mailto:{{ . }}">{{ if $isEN }}Write to us{{ else }}Écrire à la rédaction{{ end }}</a>{{ end }}
+            {{ if or .Site.Params.instagram .Site.Params.pinterest }}
+            <div class="socials">
+                {{ with .Site.Params.instagram }}<a href="{{ . }}" rel="noopener">Instagram</a>{{ end }}
+                {{ with .Site.Params.pinterest }}<a href="{{ . }}" rel="noopener">Pinterest</a>{{ end }}
+            </div>
+            {{ end }}
+        </div>
+    </div>
+    <p class="footer-mark" aria-hidden="true">Jolies Pièces</p>
+    <p class="footer-bottom">&copy; {{ now.Year }} {{ .Site.Title }}. {{ if $isEN }}All rights reserved.{{ else }}Tous droits réservés.{{ end }}</p>
+</footer>

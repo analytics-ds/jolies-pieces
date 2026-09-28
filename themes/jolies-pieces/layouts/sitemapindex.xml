@@ -1,0 +1,33 @@
+{{ printf "<?xml version=\"1.0\" encoding=\"utf-8\" standalone=\"yes\"?>" | safeHTML }}
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+{{- /* Sitemap unifie a la racine, FR (racine) et EN (/en/) dans un seul fichier.
+       Hugo genere sinon un index pointant vers /fr/sitemap.xml et /en/sitemap.xml, qui listent
+       des URLs situees au-dessus de leur propre chemin : Google refuse ce cas hors declaration
+       explicite dans le robots.txt. Un seul urlset a la racine evite le probleme. */ -}}
+{{- $all := slice -}}
+{{- range hugo.Sites -}}
+  {{- with .Home }}{{ $all = $all | append . }}{{ end -}}
+  {{- range .RegularPages -}}
+    {{- if not (or (eq .Type "tags") (eq .Section "tags") .Params.private .Params.noindex) -}}
+      {{- $all = $all | append . -}}
+    {{- end -}}
+  {{- end -}}
+  {{- range .Sections -}}
+    {{- if ne .Section "tags" }}{{ $all = $all | append . }}{{ end -}}
+  {{- end -}}
+  {{- range (where .Pages "Kind" "term") -}}
+    {{- if not (or (eq .Type "tags") (eq .Section "tags") (and (eq .Data.Plural "formats") (not .Pages))) }}{{ $all = $all | append . }}{{ end -}}
+  {{- end -}}
+{{- end }}
+{{ range $all }}
+  <url>
+    <loc>{{ .Permalink }}</loc>{{ if not .Lastmod.IsZero }}
+    <lastmod>{{ safeHTML (.Lastmod.Format "2006-01-02T15:04:05-07:00") }}</lastmod>{{ end }}
+    <changefreq>{{ if .IsHome }}daily{{ else if .IsNode }}weekly{{ else }}monthly{{ end }}</changefreq>
+    <priority>{{ if .IsHome }}1.0{{ else if .IsNode }}0.8{{ else }}0.7{{ end }}</priority>
+    {{- range partial "hreflang-alternates.html" . }}
+    <xhtml:link rel="alternate" hreflang="{{ .lang }}" href="{{ .url }}" />
+    {{- end }}
+  </url>
+{{- end }}
+</urlset>

@@ -1,0 +1,19 @@
+{{- /* Garde-fou de build : fait echouer `hugo` si une traduction casserait la reciprocite
+       des hreflang. Cas vise : deux pages de la meme langue partagent un translationKey,
+       la version etrangere ne peut alors pointer que vers une des deux.
+       Appele une seule fois, depuis la home FR. */ -}}
+{{- $seen := dict -}}
+{{- range hugo.Sites -}}
+  {{- range .Pages -}}
+    {{- $lang := .Language.Lang -}}
+    {{- $key := .Params.translationKey -}}
+    {{- if $key -}}
+      {{- $id := lower (printf "%s|%s" $lang $key) -}}
+      {{- $path := .File.Path | default .RelPermalink -}}
+      {{- with index $seen $id -}}
+        {{- if ne . $path }}{{ errorf "hreflang : translationKey %q en double en %s (%s et %s). Une cle = une seule page par langue." $key $lang . $path }}{{ end -}}
+      {{- end -}}
+      {{- $seen = merge $seen (dict $id $path) -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}

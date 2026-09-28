@@ -1,0 +1,30 @@
+{{ define "main" }}
+{{- $isEN := eq .Site.Language.Lang "en" -}}
+{{- $home := cond $isEN "/en/" "/" -}}
+<section class="page-hero">
+    <nav class="breadcrumb" aria-label="{{ if $isEN }}Breadcrumb{{ else }}Fil d'Ariane{{ end }}">
+        <a href="{{ $home }}">{{ if $isEN }}Home{{ else }}Accueil{{ end }}</a><span aria-hidden="true">/</span><span>{{ .Title }}</span>
+    </nav>
+    <h1 class="page-display">{{ partial "resolveyear" .Title }}</h1>
+    {{ with .Params.tagline }}<p class="page-script">{{ . }}</p>{{ end }}
+</section>
+
+<section class="block hub-intro">
+    {{ with .Params.image }}<img class="hub-visual" src="{{ . | relURL }}" alt="{{ $.Params.imageAlt }}" width="700" height="1050">{{ end }}
+    <div class="prose">{{ .Content }}</div>
+</section>
+
+<section class="block">
+    <h2 class="script-title">{{ if $isEN }}All stories{{ else }}Tous les articles{{ end }}</h2>
+    {{ $pages := .Pages.ByDate.Reverse }}
+    {{ if $pages }}
+    <div class="cards">{{ range $pages }}{{ partial "card.html" . }}{{ end }}</div>
+    {{ else }}
+    <p class="empty-note">{{ if $isEN }}This section is being written. Come back soon.{{ else }}Cette rubrique est en cours d'écriture. Revenez très vite.{{ end }}</p>
+    {{ end }}
+</section>
+
+{{ with .Params.faq }}
+<section class="block narrow">{{ partial "faq.html" (dict "faq" . "isEN" $isEN) }}</section>
+{{ end }}
+{{ end }}

@@ -1,0 +1,8 @@
+{{- /* Les deux hubs de format dans la langue courante, dans l'ordre Guides puis Comparatifs.
+       Passe par GetPage : site.Taxonomies ignore un hub qui n'a pas encore d'article. */ -}}
+{{- $isEN := eq site.Language.Lang "en" -}}
+{{- $out := slice -}}
+{{- range (slice "/formats/guides" (cond $isEN "/formats/comparisons" "/formats/comparatifs")) -}}
+  {{- with site.GetPage . }}{{ $out = $out | append . }}{{ end -}}
+{{- end -}}
+{{- return $out -}}

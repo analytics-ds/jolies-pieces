@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="Léa Fontanel">
+<title>Léa Fontanel</title>
+<defs><clipPath id="c-lea-fontanel"><circle cx="256" cy="256" r="256"/></clipPath></defs>
+<g clip-path="url(#c-lea-fontanel)">
+<rect width="512" height="512" fill="#D9CFC4"/>
+<path d="M150 240c0-80 46-132 106-132s106 52 106 132v150H150z" fill="#3B3735"/>
+<path d="M86 512c0-92 70-140 170-140s170 48 170 140z" fill="#B9A999"/>
+<path d="M226 318h60v64c0 22-60 22-60 0z" fill="#E9D8C8"/>
+<ellipse cx="256" cy="250" rx="74" ry="90" fill="#F1E2D3"/>
+<path d="M182 240c4-62 38-100 88-100 44 0 70 34 74 70-40-6-78-30-96-56-12 40-36 70-66 86z" fill="#3B3735"/>
+</g></svg>

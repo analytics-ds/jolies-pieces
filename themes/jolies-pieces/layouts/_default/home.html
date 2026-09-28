@@ -1,0 +1,111 @@
+{{ define "main" }}
+{{- $isEN := eq .Site.Language.Lang "en" -}}
+{{- $sections := (where .Site.Sections "Type" "not in" (slice "tags" "auteurs" "authors")).ByWeight -}}
+{{- $posts := (where .Site.RegularPages "Section" "in" site.Params.rubriques).ByDate.Reverse -}}
+{{- $fp := partial "format-pages.html" . -}}
+{{- $guides := index $fp 0 -}}{{- $comparatifs := index $fp 1 -}}
+{{- $featured := index (where $posts "Params.featured" true) 0 | default (index $posts 0) -}}
+
+<section class="hero">
+    <h1 class="hero-title">
+        <span class="hero-display">Jolies Pièces</span>
+        <span class="hero-script">{{ .Site.Params.script }}</span>
+    </h1>
+    <div class="hero-visual">
+        <img src="{{ "images/visuels/hero.webp" | relURL }}" alt="{{ if $isEN }}Woman in a white shirt against a beige backdrop{{ else }}Femme en chemise blanche sur fond beige{{ end }}" width="2000" height="1335" fetchpriority="high">
+        <p class="hero-lede">
+            {{ if $isEN }}Jolies Pièces is the magazine of independent fashion designers. Ready-to-wear, jewelry, shoes, bags and concept stores. We look at how a piece is made, what it is worth and where to find it, with every fact sourced and dated.
+            {{ else }}Jolies Pièces est le magazine des créateurs de mode. Prêt-à-porter, bijoux, chaussures, sacs et concept stores. On regarde comment une pièce est faite, ce qu'elle vaut et où la trouver, avec des faits sourcés et datés.{{ end }}
+        </p>
+        <div class="hero-actions">
+            {{ with $comparatifs }}<a class="btn-dark" href="{{ .RelPermalink }}">{{ if $isEN }}Explore the comparisons{{ else }}Explorer les comparatifs{{ end }}</a>{{ end }}
+            {{ with $guides }}<a class="btn-outline" href="{{ .RelPermalink }}">{{ if $isEN }}Read the guides{{ else }}Voir les guides{{ end }} <span aria-hidden="true">&#8599;</span></a>{{ end }}
+        </div>
+    </div>
+</section>
+
+<section class="block" id="rubriques">
+    <h2 class="script-title">{{ if $isEN }}Our sections{{ else }}Nos rubriques{{ end }}</h2>
+    <div class="tiles">
+        {{ range $sections }}{{ $s := . }}
+        <a class="tile" href="{{ .RelPermalink }}">
+            {{ with .Params.image }}<img src="{{ . | relURL }}" alt="{{ $s.Params.imageAlt }}" loading="lazy" width="700" height="1050">{{ end }}
+            <span class="tile-label">{{ .Title }}</span>
+        </a>
+        {{ end }}
+    </div>
+</section>
+
+<section class="block formats">
+    {{ range (slice $guides $comparatifs) }}{{ with . }}
+    <a class="format-panel" href="{{ .RelPermalink }}">
+        {{ with .Params.image }}<img src="{{ . | relURL }}" alt="" loading="lazy" width="700" height="1050">{{ end }}
+        <span class="format-body">
+            <span class="format-title">{{ .Title }}</span>
+            <span class="format-script">{{ .Params.tagline }}</span>
+            <span class="format-desc">{{ .Description }}</span>
+            <span class="format-cta">{{ with .Pages }}{{ len . }} {{ if $isEN }}{{ cond (eq (len .) 1) "story" "stories" }}{{ else }}article{{ if gt (len .) 1 }}s{{ end }}{{ end }}{{ else }}{{ if $isEN }}Coming soon{{ else }}Bientôt{{ end }}{{ end }} <span aria-hidden="true">&#8599;</span></span>
+        </span>
+    </a>
+    {{ end }}{{ end }}
+</section>
+
+<section class="block edito">
+    <div class="edito-photos">
+        <img class="edito-a" src="{{ "images/visuels/edito-1.webp" | relURL }}" alt="{{ if $isEN }}Designer sketching a new garment{{ else }}Créatrice dessinant un nouveau modèle{{ end }}" loading="lazy" width="700" height="1050">
+        <img class="edito-b" src="{{ "images/visuels/edito-2.webp" | relURL }}" alt="{{ if $isEN }}Sewing patterns on a workshop table{{ else }}Patrons de couture sur une table d'atelier{{ end }}" loading="lazy" width="700" height="1050">
+    </div>
+    <div class="edito-text">
+        <h2 class="display-title">{{ if $isEN }}Inspired by{{ else }}Inspiré par{{ end }}<span class="script">{{ if $isEN }}the designers{{ else }}les créateurs{{ end }}</span></h2>
+        <hr>
+        {{ .Content }}
+        <a class="btn-outline" href="{{ (cond $isEN "about/" "a-propos/") | relLangURL }}">{{ if $isEN }}Our method{{ else }}Notre méthode{{ end }} <span aria-hidden="true">&#8599;</span></a>
+    </div>
+</section>
+
+{{ with $featured }}
+<section class="block">
+    <a class="lookbook" href="{{ .RelPermalink }}">
+        <img src="{{ "images/visuels/lookbook.webp" | relURL }}" alt="" loading="lazy" width="2000" height="1333">
+        <span class="lb-left">{{ if $isEN }}Cover<br>story{{ else }}À la<br>une{{ end }}</span>
+        {{- $m := int (.Date.Format "1") -}}
+        {{- $season := cond (and (ge $m 3) (le $m 5)) (cond $isEN "Spring" "Printemps") (cond (and (ge $m 6) (le $m 8)) (cond $isEN "Summer" "Été") (cond (and (ge $m 9) (le $m 11)) (cond $isEN "Fall" "Automne") (cond $isEN "Winter" "Hiver"))) }}
+        <span class="lb-right">{{ $season }}<br>{{ .Date.Year }}<span class="script">{{ with .CurrentSection }}{{ lower .Title }}{{ end }}</span></span>
+        <span class="lb-bottom">
+            <span class="lb-title">{{ partial "resolveyear" .Title }}</span>
+            <span class="btn-outline light">{{ if $isEN }}Read the feature{{ else }}Lire le dossier{{ end }} <span aria-hidden="true">&#8599;</span></span>
+        </span>
+    </a>
+</section>
+{{ end }}
+
+<section class="block">
+    <h2 class="script-title">{{ if $isEN }}Latest stories{{ else }}Derniers articles{{ end }}</h2>
+    {{ if $posts }}
+    <div class="cards">{{ range first 6 $posts }}{{ partial "card.html" . }}{{ end }}</div>
+    {{ else }}
+    <p class="empty-note">{{ if $isEN }}First stories coming soon.{{ else }}Les premiers articles arrivent.{{ end }}</p>
+    {{ end }}
+</section>
+
+<section class="block">
+    <h2 class="script-title">{{ if $isEN }}Our method{{ else }}Notre méthode{{ end }}</h2>
+    <div class="method">
+        <div class="method-item">
+            <img src="{{ "images/visuels/methode-1.webp" | relURL }}" alt="{{ if $isEN }}Curated rail of neutral garments{{ else }}Portant de pièces aux tons neutres{{ end }}" loading="lazy" width="700" height="1050">
+            <h3>{{ if $isEN }}Designers first{{ else }}Les créateurs d'abord{{ end }}</h3>
+            <p>{{ if $isEN }}We write about the people who design and make the pieces: their workshop, their materials, their choices. Not about logos.{{ else }}Nous écrivons sur celles et ceux qui dessinent et fabriquent les pièces, leur atelier, leurs matières, leurs choix. Pas sur les logos.{{ end }}</p>
+        </div>
+        <div class="method-item">
+            <img src="{{ "images/visuels/methode-2.webp" | relURL }}" alt="{{ if $isEN }}Minimalist clothing rail{{ else }}Portant de vêtements minimaliste{{ end }}" loading="lazy" width="700" height="1050">
+            <h3>{{ if $isEN }}Checked facts{{ else }}Des faits vérifiés{{ end }}</h3>
+            <p>{{ if $isEN }}Materials, prices, origins and addresses are checked at the source before publication, and every article lists its sources.{{ else }}Matières, prix, origines et adresses sont vérifiés à la source avant publication, et chaque article liste ses sources.{{ end }}</p>
+        </div>
+        <div class="method-item">
+            <img src="{{ "images/visuels/methode-3.webp" | relURL }}" alt="{{ if $isEN }}Clothes on hangers in a bright room{{ else }}Vêtements sur cintres dans une pièce lumineuse{{ end }}" loading="lazy" width="700" height="1050">
+            <h3>{{ if $isEN }}Selections that name everyone{{ else }}Des sélections qui nomment tout le monde{{ end }}</h3>
+            <p>{{ if $isEN }}Our selections include every serious option, including the ones that do better. No placement is ever sold.{{ else }}Nos sélections citent toutes les options sérieuses, y compris celles qui font mieux. Aucun placement n'est vendu.{{ end }}</p>
+        </div>
+    </div>
+</section>
+{{ end }}
