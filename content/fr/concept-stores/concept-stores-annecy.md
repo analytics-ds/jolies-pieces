@@ -42,7 +42,7 @@ faq:
   - question: "Où acheter des vêtements de créateurs à Annecy ?"
     answer: "Rue de la Poste, Lulli sur la Toile présente une sélection de créateurs comme Anine Bing, Isabel Marant, Forte_Forte ou Golden Goose. Passage Gruffaz, Le Patio propose notamment Laurence Bras, MKT Studio et Hartford. Ce sont les deux adresses du guide les plus tournées vers le vêtement."
   - question: "Quel concept store d'Annecy propose aussi un café ?"
-    answer: "Jolibo dispose d'un coin café dans sa boutique, rue Fabien Calloud. Inspiration 212, avenue de Genève, est d'abord un lieu de brunch et de coffee, avec un espace concept store et un salon de tatouage."
+    answer: "Jolibo dispose d'un coin café dans sa boutique, rue Fabien Calloud. Inspiration 212, avenue de Genève, est d'abord un lieu de brunch et un coffee shop, avec un espace concept store et un salon de tatouage."
   - question: "Où trouver des bijoux de créateurs à Annecy ?"
     answer: "Les Palettes, rue de la Paix, réunit des créateurs comme Aurélie Bidermann, Dorothée Sausset, Goossens, Justine Clenquet ou Serge Thoraval. Rose, rue Président Favre, propose des bijoux et accessoires plus accessibles."
   - question: "Ces concept stores vendent-ils en ligne ?"
@@ -90,9 +90,7 @@ Les informations viennent du site de chaque enseigne, les notes et nombres d'avi
 
 ### Lulli sur la Toile, rue de la Poste
 
-Concept store fondé à Marseille par Anne Vouland, [Lulli sur la Toile](https://www.lulli-sur-la-toile.com/toutes-nos-boutiques-mode/annecy) tient une boutique au 6 rue de la Poste, ouverte du lundi au samedi de 10h à 19h. L'espace est clair et épuré, avec un mobilier en bois qui met en valeur sacs, paniers et chaussures. Parmi les créateurs mis en avant à Annecy figurent Anine Bing, Isabel Marant, Forte_Forte, Golden Goose, Dragon Diffusion, Ibeliv et Sebago.
-
-L'enseigne revendique une quinzaine de boutiques et près de 220 labels. Le Click and Collect permet de commander en ligne et de récupérer sa pièce rue de la Poste. La note Google, 4,9, repose sur seulement 12 avis au moment du relevé.
+Concept store fondé à Marseille par Anne Vouland, qui revendique une quinzaine de boutiques et près de 220 labels, [Lulli sur la Toile](https://www.lulli-sur-la-toile.com/toutes-nos-boutiques-mode/annecy) tient une boutique au 6 rue de la Poste, ouverte du lundi au samedi, avec retrait des commandes en ligne. Parmi les créateurs mis en avant à Annecy figurent Anine Bing, Isabel Marant, Forte_Forte, Golden Goose, Dragon Diffusion, Ibeliv et Sebago. Sa note Google de 4,9 repose sur seulement 12 avis.
 
 ### Le Patio, passage Gruffaz
 
@@ -106,7 +104,7 @@ Nichée passage Gruffaz, [Le Patio](https://boutiquelepatio.com/) est une petite
 
 ### Rose, rue Président Favre
 
-[Rose](https://www.rose-boutique.fr/) fait partie d'un petit réseau de boutiques présent notamment à Annecy, Chambéry et Lyon. Bijoux, maroquinerie, textile, accessoires, un coin enfant et un peu de déco, avec une promesse claire, se faire plaisir pour tous les budgets. C'est l'adresse la plus accessible de ce guide.
+[Rose](https://www.rose-boutique.fr/) fait partie d'un petit réseau de boutiques présent notamment à Annecy, Chambéry et Lyon. On y trouve des bijoux, de la maroquinerie, du textile, des accessoires, un coin enfant et un peu de déco. L'enseigne affiche une promesse simple, se faire plaisir quel que soit son budget.
 
 ## Pour un cadeau et une pause
 
@@ -116,17 +114,17 @@ Nichée passage Gruffaz, [Le Patio](https://boutiquelepatio.com/) est une petite
 
 ### Inspiration 212, avenue de Genève
 
-[Inspiration 212](https://www.inspiration212.com/) est d'abord un lieu de brunch et de coffee, qui réunit sous le même toit un espace concept store et un salon de tatouage. Avec 642 avis Google et une note de 4,8, c'est de loin l'adresse la plus commentée, mais sa fiche Google est celle d'un restaurant de brunch, et les avis ne portent donc pas seulement sur la boutique.
+[Inspiration 212](https://www.inspiration212.com/) est d'abord un lieu de brunch et un coffee shop, qui réunit sous le même toit un espace concept store et un salon de tatouage. Avec 642 avis Google et une note de 4,8, c'est de loin l'adresse la plus commentée, mais sa fiche Google est celle d'un restaurant de brunch, et les avis ne portent donc pas seulement sur la boutique.
 
 ## Comment choisir
 
 - **Vous cherchez un vêtement.** Lulli sur la Toile pour les créateurs et la chaussure, Le Patio pour une sélection plus resserrée.
-- **Vous cherchez un bijou.** Les Palettes pour une pièce de créateur, Rose pour un budget plus serré.
+- **Vous cherchez un bijou.** Les Palettes pour une pièce de créateur, Rose pour un accessoire du quotidien.
 - **Vous cherchez un cadeau.** Jolibo pour l'objet et la papeterie, Inspiration 212 si le cadeau est surtout une sortie.
 - **Vous voulez commander à distance.** Lulli sur la Toile et Les Palettes sont les deux adresses de ce guide avec une vraie boutique en ligne.
 
 ## Les limites de ce guide
 
-Six adresses ne font pas le tour d'Annecy. D'autres concept stores souvent cités, comme babeth, Biutiful, Établi 65, Murmur ou Rare & Rude, n'ont pas été retenus ici pour garder un guide lisible. La note de Le Patio n'a pas été relevée, la boutique n'apparaissant pas dans les résultats consultés. Enfin, les notes Google sont un instantané, et 12 avis ne pèsent pas autant que 642.
+Six adresses ne font pas le tour d'Annecy. D'autres concept stores souvent cités, comme babeth, Biutiful, Établi 65, Murmur ou Rare & Rude, n'ont pas été retenus ici pour garder un guide lisible. La note du Patio n'a pas été relevée, la boutique n'apparaissant pas dans les résultats consultés. Enfin, les notes Google sont un instantané, et 12 avis ne pèsent pas autant que 642.
 
 Si le mot vous paraît flou, notre article [qu'est-ce qu'un concept store](/concept-stores/qu-est-ce-qu-un-concept-store/) revient sur l'origine du format. Avant d'acheter un bijou, les repères entre [plaqué or, vermeil ou or massif](/bijoux/plaque-or-vermeil-or-massif/) évitent les mauvaises surprises. Et pour le vêtement, notre guide du [prêt-à-porter de créateur](/pret-a-porter/pret-a-porter-de-createur/) aide à lire une étiquette.

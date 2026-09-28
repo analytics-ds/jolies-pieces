@@ -42,7 +42,7 @@ faq:
   - question: "Where can I buy designer clothing in Annecy?"
     answer: "On rue de la Poste, Lulli sur la Toile shows a selection of designers such as Anine Bing, Isabel Marant, Forte_Forte and Golden Goose. On passage Gruffaz, Le Patio offers Laurence Bras, MKT Studio and Hartford among others. They are the two addresses in this guide most focused on clothing."
   - question: "Which Annecy concept store also has a café?"
-    answer: "Jolibo has a coffee corner in its shop, rue Fabien Calloud. Inspiration 212, avenue de Genève, is first a brunch and coffee venue, with a concept store area and a tattoo studio."
+    answer: "Jolibo has a coffee corner in its shop, rue Fabien Calloud. Inspiration 212, avenue de Genève, is first a brunch spot and coffee shop, with a concept store area and a tattoo studio."
   - question: "Where can I find designer jewellery in Annecy?"
     answer: "Les Palettes, rue de la Paix, brings together designers such as Aurélie Bidermann, Dorothée Sausset, Goossens, Justine Clenquet and Serge Thoraval. Rose, rue Président Favre, offers more affordable jewellery and accessories."
   - question: "Do these concept stores sell online?"
@@ -90,9 +90,7 @@ Information comes from each retailer's website, ratings and review counts from G
 
 ### Lulli sur la Toile, rue de la Poste
 
-A concept store founded in Marseille by Anne Vouland, [Lulli sur la Toile](https://www.lulli-sur-la-toile.com/toutes-nos-boutiques-mode/annecy) runs a boutique at 6 rue de la Poste, open Monday to Saturday from 10am to 7pm. The space is light and pared back, with wooden furniture that sets off bags, baskets and shoes. Designers featured in Annecy include Anine Bing, Isabel Marant, Forte_Forte, Golden Goose, Dragon Diffusion, Ibeliv and Sebago.
-
-The company claims around fifteen boutiques and nearly 220 labels. Click and Collect lets you order online and pick up your piece on rue de la Poste. The Google rating, 4.9, rests on only 12 reviews at the time of recording.
+A concept store founded in Marseille by Anne Vouland, which claims around fifteen boutiques and nearly 220 labels, [Lulli sur la Toile](https://www.lulli-sur-la-toile.com/toutes-nos-boutiques-mode/annecy) runs a boutique at 6 rue de la Poste, open Monday to Saturday, with collection of online orders. Designers featured in Annecy include Anine Bing, Isabel Marant, Forte_Forte, Golden Goose, Dragon Diffusion, Ibeliv and Sebago. Its 4.9 Google rating rests on only 12 reviews.
 
 ### Le Patio, passage Gruffaz
 
@@ -106,7 +104,7 @@ Tucked away on passage Gruffaz, [Le Patio](https://boutiquelepatio.com/) is a sm
 
 ### Rose, rue Président Favre
 
-[Rose](https://www.rose-boutique.fr/) is part of a small network of shops present in Annecy, Chambéry and Lyon among others. Jewellery, leather goods, textiles, accessories, a children's corner and some decoration, with a clear promise, treat yourself on any budget. It is the most affordable address in this guide.
+[Rose](https://www.rose-boutique.fr/) is part of a small network of shops present in Annecy, Chambéry and Lyon among others. You will find jewellery, leather goods, textiles, accessories, a children's corner and some decoration. The shop makes a simple promise, treat yourself whatever your budget.
 
 ## For a gift and a break
 
@@ -116,12 +114,12 @@ Tucked away on passage Gruffaz, [Le Patio](https://boutiquelepatio.com/) is a sm
 
 ### Inspiration 212, avenue de Genève
 
-[Inspiration 212](https://www.inspiration212.com/) is first a brunch and coffee venue, which brings together a concept store area and a tattoo studio under one roof. With 642 Google reviews and a 4.8 rating, it is by far the most reviewed address, but its Google listing is that of a brunch restaurant, so the reviews are not only about the shop.
+[Inspiration 212](https://www.inspiration212.com/) is first a brunch spot and coffee shop, which brings together a concept store area and a tattoo studio under one roof. With 642 Google reviews and a 4.8 rating, it is by far the most reviewed address, but its Google listing is that of a brunch restaurant, so the reviews are not only about the shop.
 
 ## How to choose
 
 - **You are looking for clothing.** Lulli sur la Toile for designers and shoes, Le Patio for a tighter selection.
-- **You are looking for jewellery.** Les Palettes for a designer piece, Rose for a smaller budget.
+- **You are looking for jewellery.** Les Palettes for a designer piece, Rose for an everyday accessory.
 - **You are looking for a gift.** Jolibo for objects and stationery, Inspiration 212 if the gift is mostly an outing.
 - **You want to order remotely.** Lulli sur la Toile and Les Palettes are the two addresses in this guide with a real online shop.
 
