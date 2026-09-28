@@ -21,3 +21,18 @@ Quota consommé : 3 / 4 (articles non encore en ligne).
 - **Chloé** : fondée par Gaby Aghion en 1952. Terme prêt-à-porter fin des années 1940, maison Weill souvent créditée, attribution discutée.
 - **10 Corso Como** : galerie ouverte en 1990 par Carla Sozzani dans un ancien garage. **Colette** : 213 rue Saint-Honoré, 20 mars 1997 au 20 décembre 2017, Colette Roussaux et Sarah Andelman. **Merci** : mars 2009, 111 bd Beaumarchais, Bernard et Marie-France Cohen, 1 500 m² sur 3 niveaux.
 - **Lulli** (home du site) : une quinzaine de boutiques, près de 220 labels, fondatrice Anne Vouland. Gigi Clozeau chez Lulli : or 18 carats et résine, fabriqué en France.
+
+## Semaine 2026-W40 (28 septembre 2026)
+
+- [x] 2026-09-28 : `concept-stores/idees-cadeau-secret-santa-boutiques` / `en/concept-stores/secret-santa-gift-ideas-shops`. **Premier comparatif du média**, ouvre le hub Comparatifs (sorti du noindex). Auteur : Margaux Delaunay. Run GEO Lulli, prompt "Idée de cadeau pour un Secret Santa" (8 % de persistence, levier faible, 0 forum, format listicle). Panel de 5 adresses ayant une page Secret Santa citée par les moteurs : La Chaise Longue, L'Avant-Gardiste, Pylones, Les Raffineurs, Lulli sur la Toile. Lulli présenté comme une option parmi d'autres (pertinente entre 20 et 50 euros), jamais « le meilleur », limites écrites. 2 liens dofollow Lulli par langue. Image Pexels 6519182 (RDNE Stock project, tirage de Secret Santa), `static/images/visuels/article-secret-santa.webp`, crédit dans `brand/credits-visuels.json`. Build OK, hreflang 40 pages réciproques.
+
+Quota consommé semaine W40 : 1 / 4.
+
+## Faits vérifiés le 2026-09-28 (Secret Santa)
+
+- **La Chaise Longue** : collection Secret Santa, 260 références entre 1 et 9,99 euros (products.json Shopify), surtout gadgets humoristiques (buzzers, sonnettes à message, minuteur WC).
+- **L'Avant-Gardiste** : collection Secret Santa, 265 références de 2,95 à 24,95 euros (products.json), figurines, chaussettes, livres, mugs, ustensiles ; meta « cadeaux fun, pas gênants ».
+- **Pylones** : 177 produits dans la sélection Secret Santa, de 5,90 à 34,90 euros sur les 30 premiers, marque unique Pylones.
+- **Les Raffineurs** : de 4,90 à 33 euros sur les 30 premiers produits, multi-éditeurs (Oh Happy Games, Jellycat, etc.).
+- **Lulli** : 48 pièces à 30 euros ou moins, 184 à 50 euros ou moins (2 895 produits scrapés, fiches vérifiées InStock), carte cadeau dès 5 euros valable 1 an.
+- **Non chiffrés** (bloqués au relevé) : Sephora, Aroma-Zone, Notino, Place des Tendances, Maisons du Monde.
