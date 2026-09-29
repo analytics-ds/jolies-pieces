@@ -4,7 +4,7 @@ seoTitle: "Prêt-à-porter de créateur : définition et histoire"
 description: "Ce que recouvre le prêt-à-porter de créateur, ce qui le distingue de la haute couture et de la mode de masse, et comment reconnaître une pièce bien faite."
 translationKey: "designer-ready-to-wear"
 date: 2026-09-25
-lastmod: 2026-09-25
+lastmod: 2026-09-29
 auteur: ["Léa Fontanel"]
 formats: ["Guides"]
 tags: ["prêt-à-porter", "créateurs", "haute couture", "histoire de la mode"]
@@ -98,4 +98,4 @@ Quelques gestes simples suffisent, en boutique comme à réception d'une command
 
 Trois circuits coexistent. Les **boutiques et sites des créateurs** eux-mêmes, les **grands magasins** qui leur consacrent des espaces, et les **concept stores de créateurs**, qui réunissent une sélection de labels choisis et permettent de comparer les coupes au même endroit. Notre guide [qu'est-ce qu'un concept store](/concept-stores/qu-est-ce-qu-un-concept-store/) explique comment ce format s'est imposé, de Milan à Paris et en région.
 
-Le raisonnement vaut aussi pour les accessoires. Pour les bijoux, la question de la matière se pose de la même façon, et notre article [plaqué or, vermeil ou or massif](/bijoux/plaque-or-vermeil-or-massif/) donne les repères légaux pour s'y retrouver. Tous nos articles sur le vêtement sont réunis dans la rubrique [Prêt-à-porter](/pret-a-porter/).
+Le raisonnement vaut aussi pour les accessoires. Pour les bijoux, la question de la matière se pose de la même façon, et notre article [plaqué or, vermeil ou or massif](/bijoux/plaque-or-vermeil-or-massif/) donne les repères légaux pour s'y retrouver. Tous nos articles sur le vêtement sont réunis dans la rubrique [Prêt-à-porter](/pret-a-porter/). Pour passer à l'achat, notre comparatif des [sites de vêtements de marque pour femme](/pret-a-porter/vetements-de-marque-femme/) met face à face sites officiels et concept store, et nos sélections de [chaussures de créateur pour femme](/chaussures/chaussures-de-createur-femme/) et de [baskets femme tendance](/chaussures/baskets-femme/) complètent la silhouette.

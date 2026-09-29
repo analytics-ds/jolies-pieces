@@ -4,7 +4,7 @@ seoTitle: "What is a concept store? Definition and examples"
 description: "A concept store brings curated designers and several worlds together under one point of view. Definition, history from 10 Corso Como to Colette, examples."
 translationKey: "concept-store-definition"
 date: 2026-09-25
-lastmod: 2026-09-25
+lastmod: 2026-09-29
 featured: true
 auteur: ["Margaux Delaunay"]
 formats: ["Guides"]
@@ -119,4 +119,4 @@ A few signs are reliable:
 
 Online retail offers breadth and convenience. A concept store offers what a catalog cannot, a selection with a face, advice, and discovery with the piece in hand. That is also why independent designers value it. A concept store gives them a place next to more established names, in front of customers who come precisely to discover.
 
-To go further, our guide to [designer ready-to-wear](/en/ready-to-wear/designer-ready-to-wear/) explains what the word designer means in clothing, and our piece on [gold plated, vermeil or solid gold](/en/jewelry/gold-plated-vermeil-solid-gold/) gives the benchmarks for choosing jewelry. All our addresses live in the [Concept stores](/en/concept-stores/) section.
+To go further, our guide to [designer ready-to-wear](/en/ready-to-wear/designer-ready-to-wear/) explains what the word designer means in clothing, and our piece on [gold plated, vermeil or solid gold](/en/jewelry/gold-plated-vermeil-solid-gold/) gives the benchmarks for choosing jewelry. All our addresses live in the [Concept stores](/en/concept-stores/) section. To move from the definition to the addresses, our guides to concept stores in [Lyon](/en/concept-stores/concept-stores-lyon/), [Nice](/en/concept-stores/concept-stores-nice/) and [Annecy](/en/concept-stores/concept-stores-annecy/) cover the shops on the ground, and our comparison of [designer multi-brand sites](/en/concept-stores/designer-multi-brand-sites/) covers buying online.

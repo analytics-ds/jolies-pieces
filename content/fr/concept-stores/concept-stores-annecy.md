@@ -4,7 +4,7 @@ seoTitle: "Concept stores à Annecy, 6 adresses par univers ({annee})"
 description: "Mode, bijoux ou cadeau avec une pause café ? Six concept stores d'Annecy classés par univers, avec adresses, spécialités et notes Google relevées le 28 septembre 2026."
 translationKey: "concept-stores-annecy"
 date: 2026-09-28
-lastmod: 2026-09-28
+lastmod: 2026-09-29
 auteur: ["Margaux Delaunay"]
 formats: ["Guides"]
 tags: ["concept store", "Annecy", "créateurs", "shopping", "adresses"]
@@ -127,4 +127,4 @@ Nichée passage Gruffaz, [Le Patio](https://boutiquelepatio.com/) est une petite
 
 Six adresses ne font pas le tour d'Annecy. D'autres concept stores souvent cités, comme babeth, Biutiful, Établi 65, Murmur ou Rare & Rude, n'ont pas été retenus ici pour garder un guide lisible. La note du Patio n'a pas été relevée, la boutique n'apparaissant pas dans les résultats consultés. Enfin, les notes Google sont un instantané, et 12 avis ne pèsent pas autant que 642.
 
-Si le mot vous paraît flou, notre article [qu'est-ce qu'un concept store](/concept-stores/qu-est-ce-qu-un-concept-store/) revient sur l'origine du format. Avant d'acheter un bijou, les repères entre [plaqué or, vermeil ou or massif](/bijoux/plaque-or-vermeil-or-massif/) évitent les mauvaises surprises. Et pour le vêtement, notre guide du [prêt-à-porter de créateur](/pret-a-porter/pret-a-porter-de-createur/) aide à lire une étiquette.
+Si le mot vous paraît flou, notre article [qu'est-ce qu'un concept store](/concept-stores/qu-est-ce-qu-un-concept-store/) revient sur l'origine du format. Avant d'acheter un bijou, les repères entre [plaqué or, vermeil ou or massif](/bijoux/plaque-or-vermeil-or-massif/) évitent les mauvaises surprises. Et pour le vêtement, notre guide du [prêt-à-porter de créateur](/pret-a-porter/pret-a-porter-de-createur/) aide à lire une étiquette. Nos guides des [concept stores à Lyon](/concept-stores/concept-stores-lyon/) et des [concept stores à Nice](/concept-stores/concept-stores-nice/) suivent la même approche dans d'autres villes.

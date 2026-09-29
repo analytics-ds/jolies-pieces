@@ -4,7 +4,7 @@ seoTitle: "Plaqué or, vermeil, or massif : les vraies différences"
 description: "Plaqué or, vermeil, or massif : ce que dit la loi française, les épaisseurs minimales, les poinçons à reconnaître et comment choisir un bijou de créateur."
 translationKey: "gold-plated-vermeil-solid-gold"
 date: 2026-09-25
-lastmod: 2026-09-25
+lastmod: 2026-09-29
 auteur: ["Inès Carrel"]
 formats: ["Guides"]
 tags: ["bijoux", "or", "vermeil", "plaqué or", "poinçons"]
@@ -119,4 +119,4 @@ Les créateurs de bijoux français travaillent ces trois matières, souvent au s
 
 Les concept stores de créateurs sont un bon point d'entrée pour comparer ces matières côte à côte, pièce en main, avec un vendeur capable d'expliquer la fiche technique. C'est le cas de la sélection bijoux de [Lulli sur la Toile](https://www.lulli-sur-la-toile.com/bijoux.html), à Marseille et dans le sud-est, qui réunit plusieurs créateurs de bijoux français.
 
-Pour comprendre ce qui fait un concept store, lisez notre guide [qu'est-ce qu'un concept store](/concept-stores/qu-est-ce-qu-un-concept-store/). Et si vous vous intéressez à la démarche des créateurs au-delà du bijou, notre article sur [le prêt-à-porter de créateur](/pret-a-porter/pret-a-porter-de-createur/) prolonge la lecture. Toutes nos sélections bijoux sont réunies dans la rubrique [Bijoux](/bijoux/).
+Pour comprendre ce qui fait un concept store, lisez notre guide [qu'est-ce qu'un concept store](/concept-stores/qu-est-ce-qu-un-concept-store/). Et si vous vous intéressez à la démarche des créateurs au-delà du bijou, notre article sur [le prêt-à-porter de créateur](/pret-a-porter/pret-a-porter-de-createur/) prolonge la lecture. Toutes nos sélections bijoux sont réunies dans la rubrique [Bijoux](/bijoux/). Une fois la matière choisie, notre comparatif des [bijoux en or pour femme](/bijoux/bijoux-or-femme/) indique où les acheter en ligne.

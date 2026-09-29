@@ -4,7 +4,7 @@ seoTitle: "Gold plated vs vermeil vs solid gold: the real difference"
 description: "Gold plated, vermeil and solid gold explained under French law. Minimum gold thickness, hallmarks to look for and how to choose a designer piece."
 translationKey: "gold-plated-vermeil-solid-gold"
 date: 2026-09-25
-lastmod: 2026-09-25
+lastmod: 2026-09-29
 auteur: ["Inès Carrel"]
 formats: ["Guides"]
 tags: ["jewelry", "gold", "vermeil", "gold plated", "hallmarks"]
@@ -119,4 +119,4 @@ French jewelry designers work with all three materials, often within a single co
 
 Designer concept stores are a good place to compare materials side by side, piece in hand, with staff who can explain the specifications. One example is the jewelry selection at [Lulli sur la Toile](https://www.lulli-sur-la-toile.com/bijoux.html), a concept store from Marseille and the south of France that carries several French jewelry designers.
 
-To understand what makes a concept store, read our guide [what is a concept store](/en/concept-stores/what-is-a-concept-store/). If you are curious about how designers work beyond jewelry, our piece on [designer ready-to-wear](/en/ready-to-wear/designer-ready-to-wear/) is the natural next read. All our jewelry stories live in the [Jewelry](/en/jewelry/) section.
+To understand what makes a concept store, read our guide [what is a concept store](/en/concept-stores/what-is-a-concept-store/). If you are curious about how designers work beyond jewelry, our piece on [designer ready-to-wear](/en/ready-to-wear/designer-ready-to-wear/) is the natural next read. All our jewelry stories live in the [Jewelry](/en/jewelry/) section. Once you have chosen the metal, our comparison of [gold jewellery for women](/en/jewelry/gold-jewelry-for-women/) shows where to buy it online.

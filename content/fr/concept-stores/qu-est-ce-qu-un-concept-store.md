@@ -4,7 +4,7 @@ seoTitle: "Concept store : définition, origines et exemples"
 description: "Un concept store réunit une sélection de créateurs et plusieurs univers sous un même regard. Définition, histoire, de 10 Corso Como à Colette, exemples."
 translationKey: "concept-store-definition"
 date: 2026-09-25
-lastmod: 2026-09-25
+lastmod: 2026-09-29
 featured: true
 auteur: ["Margaux Delaunay"]
 formats: ["Guides"]
@@ -119,4 +119,4 @@ Quelques signes ne trompent pas :
 
 Le commerce en ligne offre l'étendue et la commodité. Le concept store offre ce qu'un catalogue ne sait pas faire, la sélection incarnée, le conseil et la découverte pièce en main. C'est aussi pour cela que les créateurs indépendants y tiennent. Un concept store leur donne une place à côté de noms plus établis, devant une clientèle qui vient précisément pour découvrir.
 
-Pour aller plus loin, notre guide sur [le prêt-à-porter de créateur](/pret-a-porter/pret-a-porter-de-createur/) explique ce que recouvre le mot créateur dans le vêtement, et notre article [plaqué or, vermeil ou or massif](/bijoux/plaque-or-vermeil-or-massif/) donne les repères pour choisir un bijou. Toutes nos adresses sont réunies dans la rubrique [Concept stores](/concept-stores/).
+Pour aller plus loin, notre guide sur [le prêt-à-porter de créateur](/pret-a-porter/pret-a-porter-de-createur/) explique ce que recouvre le mot créateur dans le vêtement, et notre article [plaqué or, vermeil ou or massif](/bijoux/plaque-or-vermeil-or-massif/) donne les repères pour choisir un bijou. Toutes nos adresses sont réunies dans la rubrique [Concept stores](/concept-stores/). Pour passer de la définition aux adresses, nos guides des concept stores à [Lyon](/concept-stores/concept-stores-lyon/), à [Nice](/concept-stores/concept-stores-nice/) et à [Annecy](/concept-stores/concept-stores-annecy/) font le tour des boutiques sur place, et notre comparatif des [sites multimarques de créateurs](/concept-stores/sites-multimarques-createurs/) couvre l'achat en ligne.

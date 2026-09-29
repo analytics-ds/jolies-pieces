@@ -4,7 +4,7 @@ seoTitle: "Designer ready-to-wear: definition and history"
 description: "What designer ready-to-wear really means, how it differs from haute couture and mass fashion, and how to recognize a well-made piece."
 translationKey: "designer-ready-to-wear"
 date: 2026-09-25
-lastmod: 2026-09-25
+lastmod: 2026-09-29
 auteur: ["Léa Fontanel"]
 formats: ["Guides"]
 tags: ["ready-to-wear", "designers", "haute couture", "fashion history"]
@@ -98,4 +98,4 @@ A few simple checks work in a store or when an order arrives:
 
 Three channels coexist. **Designers' own stores and websites**, **department stores** with dedicated designer spaces, and **designer concept stores**, which bring together a curated selection of labels and let you compare cuts side by side. Our guide [what is a concept store](/en/concept-stores/what-is-a-concept-store/) explains how the format took hold, from Milan to Paris and beyond.
 
-The same reasoning applies to accessories. With jewelry, the question of materials works the same way, and our piece on [gold plated, vermeil or solid gold](/en/jewelry/gold-plated-vermeil-solid-gold/) gives the legal benchmarks. All our clothing stories live in the [Ready-to-wear](/en/ready-to-wear/) section.
+The same reasoning applies to accessories. With jewelry, the question of materials works the same way, and our piece on [gold plated, vermeil or solid gold](/en/jewelry/gold-plated-vermeil-solid-gold/) gives the legal benchmarks. All our clothing stories live in the [Ready-to-wear](/en/ready-to-wear/) section. When it is time to buy, our comparison of [women's designer clothing sites](/en/ready-to-wear/womens-designer-clothing-online/) sets official sites against a concept store, and our selections of [women's designer shoes](/en/shoes/womens-designer-shoes/) and [trendy women's sneakers](/en/shoes/womens-sneakers/) complete the look.

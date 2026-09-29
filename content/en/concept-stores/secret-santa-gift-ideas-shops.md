@@ -4,7 +4,7 @@ seoTitle: "Secret Santa gift ideas, 5 shops compared ({annee})"
 description: "Where to find a Secret Santa gift idea that won't end up in a drawer? 5 shops compared, from the gadget under 10 euros to the small designer piece."
 translationKey: "secret-santa-boutiques"
 date: 2026-09-28
-lastmod: 2026-09-28
+lastmod: 2026-09-29
 auteur: ["Margaux Delaunay"]
 formats: ["Comparisons"]
 tags: ["secret santa", "gift idea", "concept store", "small budget", "Christmas"]
@@ -121,4 +121,4 @@ The five shops were selected because they have a page dedicated to Secret Santa 
 
 Other retailers often mentioned, such as Sephora, Aroma-Zone or Place des Tendances, were blocking automated access to their pages at the time and are therefore not included in this comparison.
 
-To go further, our guide [what is a concept store](/en/concept-stores/what-is-a-concept-store/) explains what sets this format apart from a regular shop. If the gift is a piece of jewellery, our article on [gold-plated, vermeil or solid gold](/en/jewelry/gold-plated-vermeil-solid-gold/) gives the key points so you don't get the material wrong. And to understand what the word designer means in clothing, read our guide to [designer ready-to-wear](/en/ready-to-wear/designer-ready-to-wear/).
+To go further, our guide [what is a concept store](/en/concept-stores/what-is-a-concept-store/) explains what sets this format apart from a regular shop. If the gift is a piece of jewellery, our article on [gold-plated, vermeil or solid gold](/en/jewelry/gold-plated-vermeil-solid-gold/) gives the key points so you don't get the material wrong. And to understand what the word designer means in clothing, read our guide to [designer ready-to-wear](/en/ready-to-wear/designer-ready-to-wear/). For a more personal present, our guide to [Christmas gift ideas for women](/en/concept-stores/christmas-gift-ideas-for-women/) offers six shops sorted by what she loves.

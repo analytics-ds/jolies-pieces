@@ -4,7 +4,7 @@ seoTitle: "Concept stores in Annecy, 6 addresses by category ({annee})"
 description: "Fashion, jewellery or a gift with a coffee break? Six Annecy concept stores sorted by category, with addresses, specialities and Google ratings recorded on 28 September 2026."
 translationKey: "concept-stores-annecy"
 date: 2026-09-28
-lastmod: 2026-09-28
+lastmod: 2026-09-29
 auteur: ["Margaux Delaunay"]
 formats: ["Guides"]
 tags: ["concept store", "Annecy", "designers", "shopping", "addresses"]
@@ -127,4 +127,4 @@ Tucked away on passage Gruffaz, [Le Patio](https://boutiquelepatio.com/) is a sm
 
 Six addresses do not cover all of Annecy. Other concept stores often mentioned, such as babeth, Biutiful, Établi 65, Murmur or Rare & Rude, were left out to keep the guide readable. Le Patio's rating was not recorded, as the shop did not appear in the results consulted. Finally, Google ratings are a snapshot, and 12 reviews do not weigh as much as 642.
 
-If the word seems vague, our article [what is a concept store](/en/concept-stores/what-is-a-concept-store/) goes back to the origins of the format. Before buying a piece of jewellery, the key points between [gold-plated, vermeil or solid gold](/en/jewelry/gold-plated-vermeil-solid-gold/) help avoid bad surprises. And for clothing, our guide to [designer ready-to-wear](/en/ready-to-wear/designer-ready-to-wear/) helps you read a label.
+If the word seems vague, our article [what is a concept store](/en/concept-stores/what-is-a-concept-store/) goes back to the origins of the format. Before buying a piece of jewellery, the key points between [gold-plated, vermeil or solid gold](/en/jewelry/gold-plated-vermeil-solid-gold/) help avoid bad surprises. And for clothing, our guide to [designer ready-to-wear](/en/ready-to-wear/designer-ready-to-wear/) helps you read a label. Our guides to [concept stores in Lyon](/en/concept-stores/concept-stores-lyon/) and [concept stores in Nice](/en/concept-stores/concept-stores-nice/) follow the same approach in other cities.
