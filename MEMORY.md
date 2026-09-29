@@ -38,6 +38,8 @@ Quota consommé : 3 / 4 (articles non encore en ligne).
   - `chaussures/chaussures-de-createur-femme` / `en/shoes/womens-designer-shoes` (Comparatifs). Repetto, Bobbies, Anthology Paris, Jonak, Lulli. Jimmy Choo non consultable (403), cité dans les limites seulement. Image Pexels 36581188 (Valentin Ivantsov).
   - Duplication 8-grammes contre 158 docs du réseau (comparatif-mode, magazine Lulli, JP) : max 3,9 %.
 
+- [x] 2026-09-29 : maillage interne renforcé (commit 3b91269). 12 anciens articles FR + EN (les 3 guides piliers, Annecy, Nice, Secret Santa) pointent désormais vers les 7 nouveaux. Contrôle : 0 lien cassé, 0 lien inter-langue, aucun orphelin, chaque article reçoit au moins 1 lien entrant depuis un autre article (hors blocs automatiques).
+
 ## Faits vérifiés le 2026-09-29 (lot de rattrapage)
 
 - **Lulli** : Lyon 5 rue des Quatre Chapeaux, lun-sam 10h-19h, 4,1/187 Maps, béton coulé et teintes beiges. Livraison offerte dès 150 euros, retours gratuits 14 jours. Prix en stock au 29/09 : Forte_Forte jupe grain de poudre 420, Jeanne Vouland blouson Romane 395, adidas Samba Rich Green 130, New Balance 1906 Moonbeam 160, Autry Windscape Low Cracklam 225, Golden Goose Super-star cuir blanc rose pâle 485, Gigi Clozeau bracelet perles résine 17 cm 245, Djula bague Magic Touch Poire or jaune 450, Stone Mini Charm Dévotion 730, Toral mocassins Kimana 179, Senso escarpins Harriet III 210, K.Jacques sandales Caravelle 275, Repetto ballerines Camille Ball noir 330 (made in France), Repetto richelieus Zizi blanc 330. E-carte cadeau 5 à 7 000 euros.
